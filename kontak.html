@@ -4,29 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layanan - SMP N 10 Purwokerto</title>
+    <title>Kontak - SMP N 10 Purwokerto</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .service-section {
+        .contact-section {
             background-color: #f8f9fa;
             padding: 60px 0;
         }
 
-        .service-card {
-            border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-icon {
-            font-size: 3rem;
+        .contact-title {
+            font-size: 2rem;
+            font-weight: bold;
             color: #ff6600;
+        }
+
+        .contact-info {
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 30px;
+        }
+
+        .contact-info h5 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .contact-form {
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 30px;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+        }
+
+        .map-container {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -53,81 +79,64 @@
         </div>
     </nav>
 
-    <!-- Services Section -->
-    <section class="service-section">
+    <!-- Contact Section -->
+    <section class="contact-section">
         <div class="container">
             <div class="text-center mb-5">
-                <h2>Layanan Sekolah</h2>
-                <p>Berikut adalah beberapa layanan yang kami sediakan untuk menunjang kebutuhan siswa, guru, dan
-                    masyarakat.</p>
+                <h2 class="contact-title">Hubungi Kami</h2>
+                <p>Silakan hubungi kami melalui form berikut atau melalui informasi kontak yang tersedia di bawah ini.
+                </p>
             </div>
             <div class="row">
-                <!-- Service 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card service-card p-4 text-center">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <h5 class="card-title">Perpustakaan</h5>
-                        <p class="card-text">Perpustakaan sekolah menyediakan koleksi buku yang lengkap untuk menunjang
-                            kegiatan belajar siswa dan tenaga pendidik.</p>
+                <!-- Contact Form -->
+                <div class="col-md-6 mb-4">
+                    <div class="contact-form">
+                        <h5>Formulir Kontak</h5>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subjek</label>
+                                <input type="text" id="subject" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Pesan</label>
+                                <textarea id="message" rows="5" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                        </form>
                     </div>
                 </div>
-                <!-- Service 2 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card service-card p-4 text-center">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-laptop"></i>
-                        </div>
-                        <h5 class="card-title">Laboratorium Komputer</h5>
-                        <p class="card-text">Laboratorium komputer yang dilengkapi dengan fasilitas modern untuk
-                            pembelajaran teknologi dan keterampilan digital siswa.</p>
+
+                <!-- Contact Information -->
+                <div class="col-md-6 mb-4">
+                    <div class="contact-info">
+                        <h5>Informasi Kontak</h5>
+                        <p><i class="fas fa-map-marker-alt"></i> Jl. Pendidikan No.10, Purwokerto, Jawa Tengah</p>
+                        <p><i class="fas fa-phone-alt"></i> (0281) 123456</p>
+                        <p><i class="fas fa-envelope"></i> info@smpn10purwokerto.sch.id</p>
+                        <h5>Ikuti Kami</h5>
+                        <p>
+                            <a href="#" class="mr-3"><i class="fab fa-facebook fa-lg"></i></a>
+                            <a href="#" class="mr-3"><i class="fab fa-twitter fa-lg"></i></a>
+                            <a href="#" class="mr-3"><i class="fab fa-instagram fa-lg"></i></a>
+                            <a href="#"><i class="fab fa-youtube fa-lg"></i></a>
+                        </p>
                     </div>
                 </div>
-                <!-- Service 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card service-card p-4 text-center">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-flask"></i>
-                        </div>
-                        <h5 class="card-title">Laboratorium Sains</h5>
-                        <p class="card-text">Laboratorium sains memberikan kesempatan bagi siswa untuk bereksperimen dan
-                            belajar secara praktis dalam bidang ilmu pengetahuan alam.</p>
-                    </div>
-                </div>
-                <!-- Service 4 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card service-card p-4 text-center">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h5 class="card-title">Konseling Siswa</h5>
-                        <p class="card-text">Layanan konseling membantu siswa dalam menangani permasalahan akademik dan
-                            non-akademik serta mendukung kesejahteraan mental mereka.</p>
-                    </div>
-                </div>
-                <!-- Service 5 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card service-card p-4 text-center">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-basketball-ball"></i>
-                        </div>
-                        <h5 class="card-title">Fasilitas Olahraga</h5>
-                        <p class="card-text">Berbagai fasilitas olahraga tersedia untuk mendukung kegiatan
-                            ekstrakurikuler dan pengembangan fisik siswa.</p>
-                    </div>
-                </div>
-                <!-- Service 6 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card service-card p-4 text-center">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h5 class="card-title">Kegiatan Ekstrakurikuler</h5>
-                        <p class="card-text">Berbagai kegiatan ekstrakurikuler diselenggarakan untuk mengembangkan minat
-                            dan bakat siswa di bidang seni, olahraga, dan keterampilan lainnya.</p>
-                    </div>
-                </div>
+            </div>
+
+            <!-- Google Maps Embed -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.9286575863477!2d109.2413165153925!3d-7.424437675396597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655e99fd82fd8d%3A0x7e8f90b6bde1f14a!2sJl.%20Pendidikan%20No.10%2C%20Purwokerto%2C%20Jawa%20Tengah!5e0!3m2!1sen!2sid!4v1698795824661!5m2!1sen!2sid"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
