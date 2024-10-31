@@ -3,7 +3,8 @@ body {
 }
 
 .navbar {
-    padding: 15px 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .hero {
@@ -76,4 +77,23 @@ body {
 .btn-primary {
     background-color: #ff6600;
     border: none;
+}
+
+.carousel-control-custom {
+    background-color: #ff6600;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-controls-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
 }

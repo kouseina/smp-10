@@ -13,21 +13,24 @@
 
     <!-- Navigation Section -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">SMP N 10 Purwokerto</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="/">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
-                <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
-                <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
-                <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
-            </ul>
+        <div class="container">
+            <a class="navbar-brand" href="#">SMP N 10 Purwokerto</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
+
 
     <!-- Hero Section -->
     <section class="hero d-flex align-items-center" id="beranda">
@@ -148,7 +151,85 @@
         </div>
     </section>
 
+    <!-- Ekstrakurikuler Section -->
+    <section class="ekstrakurikuler-section py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title">Ekstrakurikuler</h2>
+                <a href="#" class="lihat-semua">Lihat Semua &rarr;</a>
+            </div>
 
+            <div id="ekstraCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card shadow">
+                                    <img src="assets/images/ekstra.webp" class="card-img-top" alt="Ekstra Image">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Pencak Silat</h5>
+                                        <p class="card-text">Ini adalah ekstrakurikuler di mana siswa bisa...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card shadow">
+                                    <img src="assets/images/ekstra.webp" class="card-img-top" alt="Ekstra Image">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Paduan Suara</h5>
+                                        <p class="card-text">Siswa yang memiliki hobi menyanyi dan ingin...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card shadow">
+                                    <img src="assets/images/ekstra.webp" class="card-img-top" alt="Ekstra Image">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Rohani Islam</h5>
+                                        <p class="card-text">Ekstrakurikuler ini membantu siswa...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card shadow">
+                                    <img src="assets/images/ekstra.webp" class="card-img-top" alt="Ekstra Image">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Jurnalistik</h5>
+                                        <p class="card-text">Ekstrakurikuler jurnalistik membantu siswa...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tambahkan carousel-item lain untuk slide berikutnya -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card shadow">
+                                    <img src="assets/images/ekstra.webp" class="card-img-top" alt="Ekstra Image">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Rohani Kristen</h5>
+                                        <p class="card-text">Rohani Kristen membantu siswa untuk...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tambahkan lebih banyak item jika diperlukan -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls (Custom Position) -->
+                <div class="carousel-controls-container">
+                    <div class="carousel-control-custom" href="#ekstraCarousel" role="button" data-slide="prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="carousel-control-custom" href="#ekstraCarousel" role="button" data-slide="next">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Make sure to include Font Awesome for arrow icons -->
