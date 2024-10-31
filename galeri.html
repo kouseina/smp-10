@@ -4,29 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layanan - SMP N 10 Purwokerto</title>
+    <title>Galeri - SMP N 10 Purwokerto</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .service-section {
+        .gallery-section {
             background-color: #f8f9fa;
             padding: 60px 0;
         }
 
-        .service-card {
-            border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+        .gallery-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff6600;
         }
 
-        .service-card:hover {
+        .gallery-card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-card:hover {
             transform: translateY(-5px);
         }
 
-        .service-icon {
-            font-size: 3rem;
-            color: #ff6600;
+        .gallery-card img {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .gallery-card-body {
+            padding: 15px;
+        }
+
+        .gallery-card-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .gallery-card-desc {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .gallery-card-date {
+            font-size: 0.8rem;
+            color: #888;
         }
     </style>
 </head>
@@ -53,79 +78,82 @@
         </div>
     </nav>
 
-    <!-- Services Section -->
-    <section class="service-section">
+    <!-- Gallery Section -->
+    <section class="gallery-section">
         <div class="container">
             <div class="text-center mb-5">
-                <h2>Layanan Sekolah</h2>
-                <p>Berikut adalah beberapa layanan yang kami sediakan untuk menunjang kebutuhan siswa, guru, dan
-                    masyarakat.</p>
+                <h2 class="gallery-title">Galeri Kegiatan dan Fasilitas</h2>
+                <p>Lihat berbagai momen penting dan fasilitas yang tersedia di SMP N 10 Purwokerto.</p>
             </div>
             <div class="row">
-                <!-- Service 1 -->
+                <!-- Card 1 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card service-card p-4 text-center">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-book"></i>
+                    <div class="card gallery-card">
+                        <img src="assets/images/galeri.webp" alt="Upacara Bendera" class="card-img-top">
+                        <div class="gallery-card-body">
+                            <h5 class="gallery-card-title">Upacara Bendera</h5>
+                            <p class="gallery-card-desc">Momen kebersamaan siswa dalam upacara bendera setiap hari
+                                Senin.</p>
+                            <p class="gallery-card-date"><i class="fas fa-calendar-alt"></i> 20 Agustus 2024</p>
                         </div>
-                        <h5 class="card-title">Perpustakaan</h5>
-                        <p class="card-text">Perpustakaan sekolah menyediakan koleksi buku yang lengkap untuk menunjang
-                            kegiatan belajar siswa dan tenaga pendidik.</p>
                     </div>
                 </div>
-                <!-- Service 2 -->
+                <!-- Card 2 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card service-card p-4 text-center">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-laptop"></i>
+                    <div class="card gallery-card">
+                        <img src="assets/images/galeri.webp" alt="Kegiatan Belajar" class="card-img-top">
+                        <div class="gallery-card-body">
+                            <h5 class="gallery-card-title">Kegiatan Belajar</h5>
+                            <p class="gallery-card-desc">Siswa belajar dengan penuh semangat di ruang kelas modern.</p>
+                            <p class="gallery-card-date"><i class="fas fa-calendar-alt"></i> 18 September 2024</p>
                         </div>
-                        <h5 class="card-title">Laboratorium Komputer</h5>
-                        <p class="card-text">Laboratorium komputer yang dilengkapi dengan fasilitas modern untuk
-                            pembelajaran teknologi dan keterampilan digital siswa.</p>
                     </div>
                 </div>
-                <!-- Service 3 -->
+                <!-- Card 3 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card service-card p-4 text-center">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-flask"></i>
+                    <div class="card gallery-card">
+                        <img src="assets/images/galeri.webp" alt="Perpustakaan" class="card-img-top">
+                        <div class="gallery-card-body">
+                            <h5 class="gallery-card-title">Perpustakaan</h5>
+                            <p class="gallery-card-desc">Perpustakaan sekolah yang nyaman dengan koleksi buku yang
+                                lengkap.</p>
+                            <p class="gallery-card-date"><i class="fas fa-calendar-alt"></i> 10 Oktober 2024</p>
                         </div>
-                        <h5 class="card-title">Laboratorium Sains</h5>
-                        <p class="card-text">Laboratorium sains memberikan kesempatan bagi siswa untuk bereksperimen dan
-                            belajar secara praktis dalam bidang ilmu pengetahuan alam.</p>
                     </div>
                 </div>
-                <!-- Service 4 -->
+                <!-- Card 4 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card service-card p-4 text-center">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-heart"></i>
+                    <div class="card gallery-card">
+                        <img src="assets/images/galeri.webp" alt="Ekstrakurikuler Musik" class="card-img-top">
+                        <div class="gallery-card-body">
+                            <h5 class="gallery-card-title">Ekstrakurikuler Musik</h5>
+                            <p class="gallery-card-desc">Kegiatan musik siswa untuk mengembangkan bakat dalam seni.</p>
+                            <p class="gallery-card-date"><i class="fas fa-calendar-alt"></i> 25 Oktober 2024</p>
                         </div>
-                        <h5 class="card-title">Konseling Siswa</h5>
-                        <p class="card-text">Layanan konseling membantu siswa dalam menangani permasalahan akademik dan
-                            non-akademik serta mendukung kesejahteraan mental mereka.</p>
                     </div>
                 </div>
-                <!-- Service 5 -->
+                <!-- Card 5 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card service-card p-4 text-center">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-basketball-ball"></i>
+                    <div class="card gallery-card">
+                        <img src="assets/images/galeri.webp" alt="Laboratorium Komputer" class="card-img-top">
+                        <div class="gallery-card-body">
+                            <h5 class="gallery-card-title">Laboratorium Komputer</h5>
+                            <p class="gallery-card-desc">Fasilitas lab komputer dengan peralatan modern untuk belajar
+                                teknologi.</p>
+                            <p class="gallery-card-date"><i class="fas fa-calendar-alt"></i> 1 November 2024</p>
                         </div>
-                        <h5 class="card-title">Fasilitas Olahraga</h5>
-                        <p class="card-text">Berbagai fasilitas olahraga tersedia untuk mendukung kegiatan
-                            ekstrakurikuler dan pengembangan fisik siswa.</p>
                     </div>
                 </div>
-                <!-- Service 6 -->
+                <!-- Card 6 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card service-card p-4 text-center">
-                        <div class="service-icon mb-3">
-                            <i class="fas fa-users"></i>
+                    <div class="card gallery-card">
+                        <img src="assets/images/galeri.webp" alt="Fasilitas Olahraga" class="card-img-top">
+                        <div class="gallery-card-body">
+                            <h5 class="gallery-card-title">Fasilitas Olahraga</h5>
+                            <p class="gallery-card-desc">Berbagai fasilitas olahraga untuk mendukung kegiatan
+                                ekstrakurikuler.</p>
+                            <p class="gallery-card-date"><i class="fas fa-calendar-alt"></i> 12 November 2024</p>
                         </div>
-                        <h5 class="card-title">Kegiatan Ekstrakurikuler</h5>
-                        <p class="card-text">Berbagai kegiatan ekstrakurikuler diselenggarakan untuk mengembangkan minat
-                            dan bakat siswa di bidang seni, olahraga, dan keterampilan lainnya.</p>
                     </div>
                 </div>
             </div>
