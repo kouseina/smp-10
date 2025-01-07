@@ -45,11 +45,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
-                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profil.php">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="layanan.php">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.php">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.php">Kontak</a></li>
                 </ul>
             </div>
         </div>
@@ -143,11 +143,11 @@
                 <div class="col-md-4">
                     <h5>Tautan Cepat</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Beranda</a></li>
-                        <li><a href="profil.html">Profil Sekolah</a></li>
-                        <li><a href="layanan.html">Layanan</a></li>
-                        <li><a href="galeri.html">Galeri</a></li>
-                        <li><a href="kontak.html">Kontak</a></li>
+                        <li><a href="index.php">Beranda</a></li>
+                        <li><a href="profil.php">Profil Sekolah</a></li>
+                        <li><a href="layanan.php">Layanan</a></li>
+                        <li><a href="galeri.php">Galeri</a></li>
+                        <li><a href="kontak.php">Kontak</a></li>
                     </ul>
                 </div>
 

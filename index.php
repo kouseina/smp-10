@@ -1,3 +1,12 @@
+<?php
+// Koneksi ke database
+require_once 'config.php';
+
+// Ambil artikel dari database
+$stmt = $pdo->query("SELECT * FROM articles ORDER BY created_at DESC LIMIT 4"); // Menampilkan 4 artikel terbaru
+$articles = $stmt->fetchAll();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -144,18 +153,18 @@
     <!-- Navigation Section -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">SMP N 10 Purwokerto</a>
+            <a class="navbar-brand" href="index.php">SMP N 10 Purwokerto</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
-                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profil.php">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="layanan.php">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.php">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.php">Kontak</a></li>
                 </ul>
             </div>
         </div>
@@ -200,94 +209,27 @@
         <div class="container">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2 class="section-title"><i class="fas fa-newspaper"></i> Artikel & Berita Sekolah</h2>
-                <a href="#" class="lihat-semua">Lihat Semua &rarr;</a>
+                <a href="list_articles.php" class="lihat-semua">Lihat Semua &rarr;</a>
             </div>
             <div class="row">
-                <!-- Card 1 -->
+                <?php foreach ($articles as $article): ?>
                 <div class="col-md-3 mb-4">
                     <div class="card">
-                        <img src="assets/images/news.jpg" class="card-img-top" alt="Article Image">
+                        <img src="uploads/<?php echo htmlspecialchars($article['image']); ?>" class="card-img-top" alt="Article Image">
                         <div class="card-body">
                             <span class="badge badge-secondary">Berita</span>
-                            <h5 class="card-title mt-2">Aladdin Naufal Surahman Raih Medali Emas...</h5>
-                            <p class="card-text">Bertempat di Redtop Hotel dan Convention Center Purwokerto, mulai
-                                tanggal
-                                5 - 11 Agustus 2024...</p>
+                            <h5 class="card-title mt-2"><?php echo htmlspecialchars($article['title']); ?></h5>
+                            <p class="card-text"><?php echo htmlspecialchars(substr($article['description'], 0, 100)); ?>...</p>
                             <div class="card-footer d-flex justify-content-between align-items-center">
-                                <span class="text-muted small"><i class="fas fa-user"></i> SAHRUDIN</span>
-                                <span class="text-muted small"><i class="fas fa-calendar-alt"></i> August 12,
-                                    2024</span>
-                                <span class="text-muted small"><i class="fas fa-eye"></i> 491</span>
+                                <span class="text-muted small"><i class="fas fa-user"></i> <?php echo htmlspecialchars($user); ?></span>
+                                <span class="text-muted small"><i class="fas fa-calendar-alt"></i> <?php echo date('F d, Y', strtotime($article['created_at'])); ?></span>
+                                <span class="text-muted small"><i class="fas fa-eye"></i> <?php echo rand(100, 500); ?></span>
                             </div>
-                            <a href="#" class="btn btn-primary btn-block mt-2">Lihat Detail</a>
+                            <a href="article_detail.php?id=<?php echo $article['id']; ?>" class="btn btn-primary btn-block mt-2">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
-                <!-- Repeat similar card structure for additional articles -->
-                <!-- Card 2 -->
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <img src="assets/images/news.jpg" class="card-img-top" alt="Article Image">
-                        <div class="card-body">
-                            <span class="badge badge-secondary">Berita</span>
-                            <h5 class="card-title mt-2">Aladdin Naufal Surahman Raih Medali Emas...</h5>
-                            <p class="card-text">Bertempat di Redtop Hotel dan Convention Center Purwokerto, mulai
-                                tanggal
-                                5 - 11 Agustus 2024...</p>
-                            <div class="card-footer d-flex justify-content-between align-items-center">
-                                <span class="text-muted small"><i class="fas fa-user"></i> SAHRUDIN</span>
-                                <span class="text-muted small"><i class="fas fa-calendar-alt"></i> August 12,
-                                    2024</span>
-                                <span class="text-muted small"><i class="fas fa-eye"></i> 491</span>
-                            </div>
-                            <a href="#" class="btn btn-primary btn-block mt-2">Lihat Detail</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Repeat similar card structure for additional articles -->
-                <!-- Card 3 -->
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <img src="assets/images/news.jpg" class="card-img-top" alt="Article Image">
-                        <div class="card-body">
-                            <span class="badge badge-secondary">Berita</span>
-                            <h5 class="card-title mt-2">Aladdin Naufal Surahman Raih Medali Emas...</h5>
-                            <p class="card-text">Bertempat di Redtop Hotel dan Convention Center Purwokerto, mulai
-                                tanggal
-                                5 - 11 Agustus 2024...</p>
-                            <div class="card-footer d-flex justify-content-between align-items-center">
-                                <span class="text-muted small"><i class="fas fa-user"></i> SAHRUDIN</span>
-                                <span class="text-muted small"><i class="fas fa-calendar-alt"></i> August 12,
-                                    2024</span>
-                                <span class="text-muted small"><i class="fas fa-eye"></i> 491</span>
-                            </div>
-                            <a href="#" class="btn btn-primary btn-block mt-2">Lihat Detail</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Repeat similar card structure for additional articles -->
-                <!-- Card 4 -->
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <img src="assets/images/news.jpg" class="card-img-top" alt="Article Image">
-                        <div class="card-body">
-                            <span class="badge badge-secondary">Berita</span>
-                            <h5 class="card-title mt-2">Aladdin Naufal Surahman Raih Medali Emas...</h5>
-                            <p class="card-text">Bertempat di Redtop Hotel dan Convention Center Purwokerto, mulai
-                                tanggal
-                                5 - 11 Agustus 2024...</p>
-                            <div class="card-footer d-flex justify-content-between align-items-center">
-                                <span class="text-muted small"><i class="fas fa-user"></i> SAHRUDIN</span>
-                                <span class="text-muted small"><i class="fas fa-calendar-alt"></i> August 12,
-                                    2024</span>
-                                <span class="text-muted small"><i class="fas fa-eye"></i> 491</span>
-                            </div>
-                            <a href="#" class="btn btn-primary btn-block mt-2">Lihat Detail</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Repeat similar card structure for additional articles -->
-
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -389,10 +331,10 @@
                     <h5>Tautan Cepat</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">Beranda</a></li>
-                        <li><a href="profil.html">Profil Sekolah</a></li>
-                        <li><a href="layanan.html">Layanan</a></li>
-                        <li><a href="galeri.html">Galeri</a></li>
-                        <li><a href="kontak.html">Kontak</a></li>
+                        <li><a href="profil.php">Profil Sekolah</a></li>
+                        <li><a href="layanan.php">Layanan</a></li>
+                        <li><a href="galeri.php">Galeri</a></li>
+                        <li><a href="kontak.php">Kontak</a></li>
                     </ul>
                 </div>
 
