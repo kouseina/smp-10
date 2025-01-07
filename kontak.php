@@ -92,25 +92,26 @@
                 <div class="col-md-6 mb-4">
                     <div class="contact-form">
                         <h5>Formulir Kontak</h5>
-                        <form action="#" method="post">
+                        <form action="send_email.php" method="post">
                             <div class="form-group">
                                 <label for="name">Nama Lengkap</label>
-                                <input type="text" id="name" class="form-control" required>
+                                <input type="text" id="name" name="name" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" class="form-control" required>
+                                <input type="email" id="email" name="email" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="subject">Subjek</label>
-                                <input type="text" id="subject" class="form-control" required>
+                                <input type="text" id="subject" name="subject" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="message">Pesan</label>
-                                <textarea id="message" rows="5" class="form-control" required></textarea>
+                                <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Kirim Pesan</button>
                         </form>
+
                     </div>
                 </div>
 
